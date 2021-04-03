@@ -17,11 +17,13 @@
 
 <html>
   <body>
-    <div id= "root"></div>
     <script type="module">
+      let rootdiv =  document.createElement('div');
+      rootdiv.setAttribute('id', 'root');
       let mydiv = document.createElement('div');
       mydiv.textContent = "Hello World";
-      document.querySelector('#root').append(mydiv);
+      rootdiv.append(mydiv);
+      document.querySelector('body').append(rootdiv);
     </script>
   </body>
 </html>
