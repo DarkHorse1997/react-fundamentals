@@ -37,12 +37,27 @@ const largeBox = (
   </div>
 )
 
+const Box = props => (
+  <div
+    style={{fontStyle: 'italic', ...props.style}}
+    className={`box` + ' ' + props.className}
+  >
+    {props.children}
+  </div>
+)
+
 function App() {
   return (
     <div>
-      {smallBox}
-      {mediumBox}
-      {largeBox}
+      <Box className="box--small" style={{backgroundColor: 'lightblue'}}>
+        small lightblue box
+      </Box>
+      <Box className="box--medium" style={{backgroundColor: 'pink'}}>
+        medium pink box
+      </Box>
+      <Box className="box--large" style={{backgroundColor: 'orange'}}>
+        large orange box
+      </Box>
     </div>
   )
 }
