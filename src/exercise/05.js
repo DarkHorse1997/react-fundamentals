@@ -15,7 +15,7 @@ import '../box-styles.css'
 const smallBox = (
   <div
     style={{backgroundColor: 'lightblue', fontStyle: 'italic'}}
-    className={'box box--small'}
+    className="box box--small"
   >
     small lightblue box
   </div>
@@ -23,15 +23,16 @@ const smallBox = (
 const mediumBox = (
   <div
     style={{backgroundColor: 'pink', fontStyle: 'italic'}}
-    className={'box box--medium'}
+    className="box box--medium"
   >
     medium pink box
   </div>
 )
+
 const largeBox = (
   <div
     style={{backgroundColor: 'orange', fontStyle: 'italic'}}
-    className={'box box--large'}
+    className="box box--large"
   >
     large orange box
   </div>
@@ -40,7 +41,7 @@ const largeBox = (
 const Box = props => (
   <div
     style={{fontStyle: 'italic', ...props.style}}
-    className={`box` + ' ' + 'box--' + props.size}
+    className={`box box--${props.size}`}
   >
     {props.children}
   </div>
@@ -52,6 +53,7 @@ function App() {
       <Box size="small" style={{backgroundColor: 'lightblue'}}>
         small lightblue box
       </Box>
+
       <Box size="medium" style={{backgroundColor: 'pink'}}>
         medium pink box
       </Box>
